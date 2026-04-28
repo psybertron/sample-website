@@ -2,7 +2,7 @@
 .contact-form {
   display: grid;
   max-width: 770px;
-  gap: 28px;
+  gap: 20px;
   margin: 0 auto;
   padding: 20px 0px;
 
@@ -26,11 +26,10 @@
     width: 100%;
     border: 1px solid #D2DCE8;
     border-radius: 5px;
-    padding: 0.9rem 1rem;
     background-color: $color-white;
-    color: $font-color-base;
+    color: $font-color-grey;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    font-size: 1rem;
+    padding: $spacing-unit;
   }
 
 
@@ -46,7 +45,6 @@
     color: $color-white;
     border: 1px solid #11822C;
     border-radius: 5px;
-    padding: 0.85rem 1.25rem;
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
@@ -60,8 +58,8 @@
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 40px 0px;
+    gap: 20px;
+    padding: 10px 0 50px 0;
 
     .form-row:nth-child(n + 3) {
       grid-column: span 1;

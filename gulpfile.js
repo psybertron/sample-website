@@ -37,7 +37,7 @@ function scripts() {
 
 // Copy images
 function images() {
-  return gulp.src('src/images/**/*')
+  return gulp.src('src/images/**/*', { encoding: false })
     .pipe(gulp.dest('dist/images'))
     .pipe(browserSync.stream());
 }
@@ -80,3 +80,5 @@ exports.serve = serve;
 exports.build = build;
 exports.dev = dev;
 exports.default = dev;
+
+

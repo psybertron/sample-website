@@ -1,43 +1,45 @@
 // Elements: Base
 html {
   min-width: 380px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-family-base;
+  color: $font-color-grey;
 }
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 $spacing-unit 0;
-  font-weight: bold;
-}
-
-p {
-  margin: 0 0 $spacing-unit 0;
-}
-
-
-ul {
-  list-style: none;
-  padding: 0;
+body {
   margin: 0;
+  padding: 0;
 }
-.container {
+a{
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+.main {
+  .container {
   max-width: 770px;
   margin: 0 auto;
   text-align:left;
 
-  @media (min-width: 640px) {
-    text-align:center;
+  .form-title{
+   padding: 0 10px;
+   color: $font-color-grey;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     text-align:center;
+  }
+  }
+
+  hr{
+    border: none;        
+    border-top: 2px dotted $font-color-grey; 
+    height: 0px; 
+    width: 25%;
   }
 }
 
-hr{
-  border: none;        
-  border-top: 2px dotted #000; 
-  height: 0px; 
-  width: 25%;
-}
 
-.formtitle{
-   padding: 10px;
-}
+
+
