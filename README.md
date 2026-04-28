@@ -69,9 +69,9 @@ dist/              # Compiled assets
 ## Design Implementation
 
 The page implements a basic layout with:
-- Header with logo and navigation
-- Hero section
-- Grid-based content area
+- Header with title
+- Form Section
+- Banner and Carousel
 - Footer
 
 Styles follow BEM methodology (e.g., `.header`, `.nav__list`, `.hero__title`).
@@ -100,5 +100,3 @@ Grid system uses CSS Grid with responsive breakpoints.
 - Proper heading hierarchy
 - Keyboard navigation support
 - Color contrast considerations
-
-For the full design from Figma, the layout has been adapted to a responsive grid system with modern CSS practices.
