@@ -1,9 +1,9 @@
 // Components: Banner
 .banner {
   display: grid;
-  gap: 28px;
+  gap: $spacing-unit * 2;
   text-align: left;
-  padding-top: 50px;
+  padding-top: $spacing-unit * 3;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -37,7 +37,7 @@
   }
   
   a{
-    margin-top: 14px;
+    margin-top: $spacing-unit;
   }
 }
 

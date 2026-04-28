@@ -2,7 +2,7 @@
 .header {
   background-color: $color-white;
   color: $color-dark;
-  padding: 40px 0;
+  padding: $spacing-unit * 4 0;
 
   .container {
     @include flex-center;
@@ -15,7 +15,7 @@
     line-height: 30px;
     width:100%;
     text-align:left;
-    padding: 10px;
+    padding: $spacing-unit;
     
     @media (min-width: 768px) {
       text-align:center;
