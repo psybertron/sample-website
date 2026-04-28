@@ -3,9 +3,9 @@
   background-color: $color-footer;
   color: $font-color-grey;
   display: flex;
-  padding: 80px 0px;
-  box-shadow: 0 0 10px 0 $color-muted;
-  margin-top: 80px;
+  padding: $spacing-unit * 8 0px;
+  box-shadow: 0 0 $spacing-unit 0 $color-muted;
+  margin-top: $spacing-unit * 8;
 
   .container{
     @include flex-center;
