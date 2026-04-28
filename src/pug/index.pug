@@ -4,38 +4,75 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Catch Design Front-end Test
-    link(rel="stylesheet", href="css/main.min.css")
+    link(rel="stylesheet", href="/css/main.min.css")
   body
+    a.skip-link(href="#main-content") Skip to main content
     header.header(role="banner")
       .container
-        h1.logo Catch Design
-        nav.nav(role="navigation", aria-label="Main navigation")
-          ul.nav__list
-            li.nav__item
-              a.nav__link(href="#") Home
-            li.nav__item
-              a.nav__link(href="#") About
-            li.nav__item
-              a.nav__link(href="#") Services
-            li.nav__item
-              a.nav__link(href="#") Contact
-    main.main(role="main")
+        h1.logo Front-end Test
+    main.main(id="main-content" role="main")
       .container
-        section.hero
-          h2.hero__title Welcome to Our Website
-          p.hero__description This is a test page for front-end development.
-        section.grid-section
-          .grid
-            .grid__item
-              h3 Card 1
-              p Some content here.
-            .grid__item
-              h3 Card 2
-              p More content.
-            .grid__item
-              h3 Card 3
-              p Even more content.
-    footer.footer(role="contentinfo")
+        p.form-title Form title
+        form.contact-form(action="#" method="post" aria-label="Contact form")
+          .form-row
+            label(for="first-name") First name
+            input#first-name(type="text" name="first-name" placeholder="First name")
+          .form-row
+            label(for="last-name") Last name
+            input#last-name(type="text" name="last-name" placeholder="Last name")
+          .form-row
+            label(for="email") Email address
+            input#email(type="email" name="email" placeholder="Email address")
+          .form-row
+            label(for="city") City
+            select#city(name="city" aria-label="City")
+              option(value="" disabled selected hidden) City
+              option(value="new-york") New York
+              option(value="los-angeles") Los Angeles
+              option(value="chicago") Chicago
+          section.submit
+            button(type="submit") Submit
+        section.hr
+          hr
+        section.banner(aria-label="Featured photography")
+            .banner__content
+                img(src="/images/banner1.jpg", alt="Pink and purple sunset over a hill")
+                h4.banner__title Pink & Purple Sunset
+                p.banner__text Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper.
+                a(href="#") Go to the sunset
+            .banner__content
+                img(src="/images/banner2.jpg", alt="Tall trees in a lush green landscape")
+                h4.banner__title Sublime Trees
+                p.banner__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet…
+                a(href="#") View some more
+        section.carousel(aria-label="Product carousel")
+          .carousel
+            .carousel__item
+              img(src="/images/carousel1.jpg", alt="First carousel image of a scenic view")
+            .carousel__item
+              img(src="/images/carousel2.jpg", alt="Second carousel image of a scenic view")
+            .carousel__item
+              img(src="/images/carousel3.jpg", alt="Third carousel image of a scenic view")
+            .carousel__item
+              img(src="/images/carousel4.jpg", alt="Fourth carousel image of a scenic view")
+            
+    footer.footer(role="footer")
       .container
-        p.footer__text &copy; 2026 Catch Design. All rights reserved.
-    script(src="js/main.min.js")
+        .section.social
+            .div.icons
+              a(href="#", aria-label="Facebook")
+              img(src="/images/icons/icon-facebook.svg", alt="Facebook")
+              a(href="#", aria-label="Instagram")
+              img(src="/images/icons/icon-instagram.svg", alt="Instagram")
+              a(href="#", aria-label="Youtube")
+              img(src="/images/icons/icon-youtube.svg", alt="Youtube")
+            p.footer__text Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+        .section.contact
+            .contact__item
+            h4.contact__address Main Office
+            address.contact__address 6235 Thalia Terrace Apt. 695 <br/>Frederikfurt <br/>Jamaica
+            .contact__item
+            h4.contact__details Contact
+            p.contact__phone 735-421-6378
+            a.contact__email(href="mailto:myname@gmail.com") myname@gmail.com
+    script(src="/js/main.min.js") 

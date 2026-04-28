@@ -1,11 +1,67 @@
 // Components: Footer
 .footer {
-  background-color: $color-dark;
-  color: $color-white;
-  padding: $spacing-unit 0;
-  text-align: center;
+  background-color: $color-footer;
+  color: $font-color-base;
+  display: flex;
+  padding: 80px 20px;
+  box-shadow: 0 0 10px 0 $color-muted;
+  margin-top: 80px;
 
-  &__text {
-    margin: 0;
+  .container{
+    @include flex-center;
+    justify-content: space-between;
+    text-align:center;
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+  }
+
+  .section {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+
+    
+    &.social {
+      .icons{
+        min-width: 145px;
+        text-align: left;
+        margin: 20px 0;
+
+        @media (max-width: 768px) {
+          text-align: center;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      p{
+        text-align: left;
+
+        @media (max-width: 768px) {
+          text-align: center;
+        }
+      }
+    }
+
+    &.contact {
+      flex-direction: column;
+      text-align: left;
+      flex: 1;
+      padding-left: 30px;
+
+      .contact__details{
+        margin-top: 30px;
+      }
+
+      @media (max-width: 768px) {
+          text-align: center;
+        }
+    }
   }
 }
+

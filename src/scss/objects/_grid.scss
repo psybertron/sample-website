@@ -1,9 +1,5 @@
 // Objects: Grid
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 $spacing-unit;
-}
+
 
 .grid {
   @include grid();
@@ -13,11 +9,11 @@
   // Default spans full width on mobile
   grid-column: span $grid-columns;
 
-  @include media(tablet) {
+  @media (min-width: 768px) {
     grid-column: span 6;
   }
 
-  @include media(desktop) {
+  @media (min-width: 1024px) {
     grid-column: span 4;
   }
 }

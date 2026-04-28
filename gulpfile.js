@@ -35,25 +35,38 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
+// Copy images
+function images() {
+  return gulp.src('src/images/**/*')
+    .pipe(gulp.dest('dist/images'))
+    .pipe(browserSync.stream());
+}
+
 // Watch files
 function watch() {
   gulp.watch('src/pug/**/*.pug', html);
   gulp.watch('src/scss/**/*.scss', styles);
   gulp.watch('src/js/**/*.js', scripts);
+  gulp.watch('src/images/**/*', images);
 }
 
 // Serve
 function serve() {
   browserSync.init({
     server: {
-      baseDir: './dist'
+      baseDir: ['.', 'dist'],
+      routes: {
+        '/css': 'dist/css',
+        '/js': 'dist/js',
+        '/images': 'dist/images'
+      }
     }
   });
   watch();
 }
 
 // Build
-const build = gulp.parallel(html, styles, scripts);
+const build = gulp.parallel(html, styles, scripts, images);
 
 // Dev
 const dev = gulp.series(build, serve);
@@ -61,6 +74,7 @@ const dev = gulp.series(build, serve);
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.images = images;
 exports.watch = watch;
 exports.serve = serve;
 exports.build = build;
