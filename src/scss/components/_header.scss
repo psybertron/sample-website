@@ -1,0 +1,16 @@
+// Components: Header
+.header {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: $spacing-unit 0;
+
+  .container {
+    @include flex-center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

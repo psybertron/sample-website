@@ -1,0 +1,23 @@
+// Objects: Grid
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}
+
+.grid {
+  @include grid();
+}
+
+.grid__item {
+  // Default spans full width on mobile
+  grid-column: span $grid-columns;
+
+  @include media(tablet) {
+    grid-column: span 6;
+  }
+
+  @include media(desktop) {
+    grid-column: span 4;
+  }
+}

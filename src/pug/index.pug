@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Catch Design Front-end Test
+    link(rel="stylesheet", href="css/main.min.css")
+  body
+    header.header(role="banner")
+      .container
+        h1.logo Catch Design
+        nav.nav(role="navigation", aria-label="Main navigation")
+          ul.nav__list
+            li.nav__item
+              a.nav__link(href="#") Home
+            li.nav__item
+              a.nav__link(href="#") About
+            li.nav__item
+              a.nav__link(href="#") Services
+            li.nav__item
+              a.nav__link(href="#") Contact
+    main.main(role="main")
+      .container
+        section.hero
+          h2.hero__title Welcome to Our Website
+          p.hero__description This is a test page for front-end development.
+        section.grid-section
+          .grid
+            .grid__item
+              h3 Card 1
+              p Some content here.
+            .grid__item
+              h3 Card 2
+              p More content.
+            .grid__item
+              h3 Card 3
+              p Even more content.
+    footer.footer(role="contentinfo")
+      .container
+        p.footer__text &copy; 2026 Catch Design. All rights reserved.
+    script(src="js/main.min.js")

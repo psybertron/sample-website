@@ -1,0 +1,15 @@
+// Components: Hero
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: $spacing-unit;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    color: $color-secondary;
+  }
+}

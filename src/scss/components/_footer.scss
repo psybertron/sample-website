@@ -1,0 +1,11 @@
+// Components: Footer
+.footer {
+  background-color: $color-dark;
+  color: $color-white;
+  padding: $spacing-unit 0;
+  text-align: center;
+
+  &__text {
+    margin: 0;
+  }
+}
